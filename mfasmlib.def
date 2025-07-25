@@ -1,2 +1,4 @@
 EXPORTS
     AddNumbers @1 DATA
+    MultiplyNumbers @2 DATA
+    SubtractNumbers @3 DATA
