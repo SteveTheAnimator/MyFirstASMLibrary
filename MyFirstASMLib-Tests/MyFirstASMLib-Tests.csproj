@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>MyFirstASMLib_Tests</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<BaseIntermediateOutputPath>$(Temp)\temp_obj_asmlib\</BaseIntermediateOutputPath>
+	</PropertyGroup>
+	
+	<Target Name="CleanObj" AfterTargets="Build">
+		<RemoveDir Directories="$(BaseIntermediateOutputPath)" />
+	</Target>
+
+</Project>
